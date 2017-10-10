@@ -1,15 +1,51 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-  <script src="/jquery.countdown.js"></script>
-</head>
-<body>
-  <div id="contador"></div>
-  <script type="text/javascript">
-    $('#contador').countdown('2018/07/31 19:00:00', function(event) {
-      $(this).html(event.strftime('%D dias %H horas %M minutos e %S segundos'));
-    });
-  </script>
-</body>
+ <head>
+   <meta charset="utf-8">
+   <link href="https://fonts.googleapis.com/css?family=Fira+Mono" rel="stylesheet">
+   <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+   <script src="/jquery.countdown.js"></script>
+   <title>1º Desafio de Corrida de Rua Webmais</title>
+   <style media="screen">
+     body {
+       background:transparent url(img/desafiofff.jpg) no-repeat center center fixed;
+       -webkit-background-size: cover;
+       -moz-background-size: cover;
+       -o-background-size: cover;
+       background-size: cover;
+       margin: 0;
+       padding: 0;
+     }
+       #fundo {
+         background:transparent url(img/desafio.jpg) no-repeat center center fixed;
+         -webkit-background-size: contain;
+         -moz-background-size: contain;
+         -o-background-size: contain;
+         background-size: contain;
+         height: 100vh;
+         width:100%;
+       }
+       p {
+         color: #fff;
+         font-family: 'Fira Mono', monospace;
+         font-size: 4vh;
+         margin: 0 auto;
+         padding-top: 60vh;
+         width: 60vw;
+         text-align: center;
+       }
+   </style>
+ </head>
+ <body>
+   <div id="fundo">
+     <p id="contador"></p>
+
+   </div>
+   <script type="text/javascript">
+     $('#contador').countdown('2018/07/31 19:00:00', function(event) {
+       $(this).html(event.strftime('%D dias %H horas %M minutos e %S segundos'));
+     });
+   </script>
+
+ </body>
 </html>
